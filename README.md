@@ -16,17 +16,7 @@ This website serves as my digital presence where I highlight my projects, skills
 - Clean and modern UI with responsive design  
 - Showcase of projects and skills with interactive elements  
 - Integration of icons using Lucide React for better visual representation  
-- Fully modular and scalable structure for easy updates  
-
-### 🚀 Getting Started
-To run this project locally:  
-```bash
-git clone <your-repo-url>
-cd <your-project-folder>
-npm install
-npm run dev
-
-
+- Fully modular and scalable structure for easy updates
 
 # React + Vite
 
@@ -40,3 +30,15 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+### 🚀 Getting Started
+To run this project locally:  
+```bash
+git clone <your-repo-url>
+cd <your-project-folder>
+npm install
+npm run dev
+
+
+
