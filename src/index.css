@@ -65,6 +65,20 @@
       opacity: 0;
     }
   }
+
+  @keyframes stars {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
+  }
 }
 
 @layer base{
@@ -129,6 +143,7 @@
   }
 }
 
+
 @utility text-glow{
   @apply relative;
   text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
@@ -147,7 +162,7 @@
 
 @utility cosmic-button{
   @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium
-         transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+         transition-all duration-300 hover:shadow-[0_0_10px_rgba(30,144,255,0.5)]
          hover:scale-105 active:scale-95;
   
 }
@@ -158,6 +173,11 @@
 }
 
 @utility meteor{
+  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+}
+
+@utility stars{
   @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
