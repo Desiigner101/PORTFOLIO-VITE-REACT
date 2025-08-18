@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { cn } from "../lib/utils"
 import { Menu, X } from "lucide-react";
 
-
+//Navbar navigations
 const navItems = [
     {name: "Home", href: "#hero"},
     {name: "About", href: "#about"},
@@ -56,8 +56,8 @@ export const Navbar = () => {
                     ))}
                 </div>
 
-                {/*mobile nav navbar*/}
 
+                {/*mobile nav navbar*/}
                 <button 
                 onClick={() => setIsMenuOpen((prev) => !prev)} 
                 className="md:hidden p-2 text-foreground z-50"
