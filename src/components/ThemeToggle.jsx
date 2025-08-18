@@ -35,7 +35,7 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300"
+        "fixed  top-5 right-1 z-50 p-2 rounded-full transition-colors duration-300"
       )}
     >
       {isDarkMode ? (
