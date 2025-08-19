@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Send, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Send, Twitter, X } from "lucide-react";
 import { cn } from "../lib/utils";
 
 
@@ -31,8 +31,8 @@ export const ContactSection = () => {
                             <Mail className="h-6 w-6 text-primary"/>
                             </div>
 
-                            <div>
-                                <h4 className="font-medium"> Email</h4>
+                            <div className="text-center">
+                                <h4 className="font-medium flex flex-col-1"> Email</h4>
                                 <a href="desiigner4074@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                                     desiigner4074@gmail.com
                                 </a>
@@ -45,7 +45,7 @@ export const ContactSection = () => {
                             </div>
 
                             <div>
-                                <h4 className="font-medium"> Phone</h4>
+                                <h4 className="font-medium flex flex-col-1"> Phone</h4>
                                 <a href="tel:+63212010166" className="text-muted-foreground hover:text-primary transition-colors">
                                     +63 (21) 201 0166
                                 </a>
@@ -58,7 +58,7 @@ export const ContactSection = () => {
                             </div>
 
                             <div>
-                                <h4 className="font-medium"> Location</h4>
+                                <h4 className="font-medium flex flex-col-1"> Location</h4>
                                 <a className="text-muted-foreground hover:text-primary transition-colors">
                                     Bulacao, Cebu City, 6000 
                                 </a>
@@ -69,19 +69,15 @@ export const ContactSection = () => {
                     <div className="pt-8">
                         <h4 className="font-medium mb-4">Connect With Me</h4>
                         <div className="flex space-x-4 justify-center">
-                            <a href="" target="_blank">
+                            <a href="https://www.facebook.com/gino.sarsonas" target="_blank">
                                 <Facebook />
                             </a>
 
-                            <a href="" target="_blank">
+                            <a href="https://www.instagram.com/ginowithhaki/" target="_blank">
                                 <Instagram />
                             </a>
 
-                            <a href="" target="_blank">
-                                <Twitter />
-                            </a>
-
-                            <a href="" target="_blank">
+                            <a href="https://www.linkedin.com/in/gino-sarsonas-4479a52a4/" target="_blank">
                                 <Linkedin />
                             </a>
                         </div>
