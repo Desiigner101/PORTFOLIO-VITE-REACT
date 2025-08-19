@@ -1,4 +1,4 @@
-import { Briefcase, Code, User } from "lucide-react";
+import { Briefcase, Code, Globe, GraduationCap, Laptop2, User } from "lucide-react";
 
 export const AboutSection = () => {
 
@@ -17,14 +17,14 @@ export const AboutSection = () => {
                         Passionate IT Student & Technology Fanatic
                     </h3>
 
-                    <p className="text-muted-foreground text-justify-center">
+                    <p className="text-muted-foreground text-justify">
                         As a student pursuing a Bachelor of Science in Information Technology, 
                         I have developed a strong passion for exploring the ever-evolving world of technology. 
                         My academic journey has introduced me to various fields such as programming, systems development, and problem-solving, all of which have strengthened my technical foundation and analytical thinking. 
                         I take pride in being curious and adaptive, always eager to learn new skills and apply them to projects that create practical and meaningful outcomes.
                     </p>
 
-                    <p className="text-muted-foreground text-justify-center">
+                    <p className="text-muted-foreground text-justify">
                         Outside academics, I am a person who values balance and growth beyond the digital space. 
                         I enjoy stepping out of my comfort zone, exploring nature, and embracing new experiences. 
                         Alongside exercising my mind through technology and innovation, I dedicate time to physical fitness, being deeply fond of athletics and maintaining an active lifestyle. 
@@ -53,9 +53,9 @@ export const AboutSection = () => {
                             </div>
 
                             <div className="text-left">
-                                <h4 className="font-semibold text-lg">Web Development</h4>
+                                <h4 className="font-semibold text-lg">Learning to Create</h4>
                                 <p className="text-muted-foreground">
-                                    Creating responsive websites and web application with 
+                                    Creating responsive websites with 
                                     modern frameworks.
                                 </p>
                             </div>
@@ -65,14 +65,14 @@ export const AboutSection = () => {
                     <div className="gradient-border p-6 card-hover">
                         <div className="flex items-start gap-4">
                             <div className="p-3 rounded-full bg-primary/10">
-                                <User className="h-6 w-6 text-primary"/>
+                                <Laptop2 className="h-6 w-6 text-primary"/>
                             </div>
 
                             <div className="text-left">
-                                <h4 className="font-semibold text-lg">Web Development</h4>
+                                <h4 className="font-semibold text-lg">Driven by Projects</h4>
                                 <p className="text-muted-foreground">
-                                    Creating responsive websites and web application with 
-                                    modern frameworks.
+                                  I enjoy making projects, building responsive websites, 
+                                  and diving into fun coding activities 
                                 </p>
                             </div>
                         </div>
@@ -81,14 +81,30 @@ export const AboutSection = () => {
                     <div className="gradient-border p-6 card-hover">
                         <div className="flex items-start gap-4">
                             <div className="p-3 rounded-full bg-primary/10">
-                                <Briefcase className="h-6 w-6 text-primary"/>
+                                <GraduationCap className="h-6 w-6 text-primary"/>
                             </div>
 
                             <div className="text-left">
-                                <h4 className="font-semibold text-lg">Web Development</h4>
+                                <h4 className="font-semibold text-lg">Academic Journey</h4>
                                 <p className="text-muted-foreground">
-                                    Creating responsive websites and web application with 
-                                    modern frameworks.
+                                    More than just a cap it reflects my journey as a student. Every challenge, lesson, 
+                                    and milestone has shaped me into who I am today, ready to take on greater opportunities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="gradient-border p-6 card-hover">
+                        <div className="flex items-start gap-4">
+                            <div className="p-3 rounded-full bg-primary/10">
+                                <Globe className="h-6 w-6 text-primary"/>
+                            </div>
+
+                            <div className="text-left">
+                                <h4 className="font-semibold text-lg">Teamwork & Collaboration</h4>
+                                <p className="text-muted-foreground">
+                                  I enjoy teamwork sharing ideas, collaborating on projects, and 
+                                  building something greater together.  
                                 </p>
                             </div>
                         </div>
