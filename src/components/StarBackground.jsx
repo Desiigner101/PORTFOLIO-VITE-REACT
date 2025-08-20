@@ -33,11 +33,11 @@ export const StartBackground = () => {
         for (let i = 0; i < numberOfStars; i++){
             newStars.push({
                 id:i,
-                size: Math.random() * 3 + 1,
+                size: Math.random() * 4 + 1,
                 x: Math.random() * 100,
-                y: Math.random() * 100,
+                y: Math.random() * 110,
                 opacity: Math.random() * 0.5 + 0.5,
-                animationDuration: Math.random() * 4 + 2,
+                animationDuration: Math.random() * 10 + 2,
             });
         }
 
@@ -90,7 +90,7 @@ export const StartBackground = () => {
             <div key={star.id} 
             className="star animate-pulse-subtle" 
             style={{
-                width: star.size + "px",
+                width: star.size  +  "px",
                 height: star.size + "px",
                 left: star.x + "%",
                 top: star.y + "%",
