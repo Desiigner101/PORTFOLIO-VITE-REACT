@@ -23,7 +23,7 @@ export const ContactSection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                <div className="space-y-8">
-                    <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <h3 id="contact" className="text-2xl font-semibold mb-6">Contact Information</h3>
                 
                     <div className="space-y-6 justify-center">
                         <div className="flex items-start space-x-4">
