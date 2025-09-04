@@ -5,6 +5,11 @@ Welcome to my first personal portfolio website! This project showcases my journe
 ### About This Project
 This website serves as my digital presence where I highlight my projects, skills, and experiences in the field of Information Technology. It’s built with modern web technologies to ensure a fast, responsive, and visually appealing experience.
 
+<img width="1902" height="957" alt="dsdas" src="https://github.com/user-attachments/assets/d87ef9ce-aeb3-4bee-890e-957790bbe283" />
+<img width="1903" height="951" alt="dsdadsd" src="https://github.com/user-attachments/assets/74b7f982-2d3b-40f5-8bae-2c10ffa0651a" />
+
+
+
 ### 🛠️ Technologies Used
 - **React** – For building a dynamic, component-based UI  
 - **Vite** – Lightning-fast development and build tool  
