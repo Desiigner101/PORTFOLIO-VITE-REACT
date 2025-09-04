@@ -15,19 +15,19 @@ const skills = [
     {name: "MongoDB", level: 8, category: "backend"}, 
     
     //Languages
-    {name: "Python", level: 70, category: "languages"}, 
+    {name: "Python", level: 60, category: "languages"}, 
     {name: "C", level: 51, category: "languages"}, 
-    {name: "Java", level: 60, category: "languages"},
-    {name: "Kotlin", level: 40, category: "languages"}, 
+    {name: "Java", level: 55, category: "languages"},
+    {name: "Kotlin", level: 30, category: "languages"}, 
 
     
     //Tools
     {name: "Git/GitHub", level: 90, category: "tools"}, 
-    {name: "Postman", level: 40, category: "tools"}, 
+    {name: "Postman", level: 45, category: "tools"}, 
     {name: "Figma", level: 85, category: "tools"}, 
     {name: "Android Studio", level: 77, category: "tools"},
     {name: "VS Code", level: 97, category: "tools"}, 
-    {name: "IntelliJ IDEA", level: 86, category: "tools"},
+    {name: "IntelliJ IDEA", level: 87, category: "tools"},
     
 ];
 
