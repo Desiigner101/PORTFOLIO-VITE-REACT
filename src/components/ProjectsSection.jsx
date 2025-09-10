@@ -37,11 +37,11 @@ const projects = [
     {
         id:4,
         title:  "GENBUILD-POS",
-        description: "Final project for Mobile Development class, developed independently using Kotlin in Android Studio. This project marked my first solo application build and a key step in strengthening my mobile development skills.",
-        image: "/projects/MOBILE_APP_PROJECT3.png",
-        tags: ["Kotlin", "Android Studio", "GitHub"],
+        description: "A student-built Retail Billing Software inspired by my GenBuild app and Figma designs — my first ever POS system using React.js & Spring Boot, made as a humble step in learning full-stack development.",
+        image: "/projects/genbuild_version1.png",
+        tags: ["Javascript", "React", "Vite", "Springboot", "RESTFUL"],
         demoUrl: "#",
-        githubUrl: "https://github.com/Desiigner101/GenBuild",
+        githubUrl: "https://github.com/Desiigner101/GENBUILD-POS",
 
     },
 
