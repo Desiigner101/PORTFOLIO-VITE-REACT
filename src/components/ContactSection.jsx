@@ -8,7 +8,7 @@ export const ContactSection = () => {
     
     return (
     <section 
-    id="#contact" 
+    id="contacts" 
     className="py-24 px-4 relative bg-secondary/30"
     >
         <div className="container mx-auto max-w-5xl">
