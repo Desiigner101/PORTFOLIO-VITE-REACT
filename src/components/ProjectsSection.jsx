@@ -36,7 +36,7 @@ const projects = [
 
     {
         id:4,
-        title:  "GenBuild POS",
+        title:  "GenBuild POS v1.0",
         description: "A student-built Retail Billing Software inspired by my GenBuild app and Figma designs — my first ever POS system using React.js & Spring Boot, made as a humble step in learning full-stack development.",
         image: "/projects/genbuild_version1.png",
         tags: ["Javascript", "React", "Vite", "Springboot", "REST API"],
