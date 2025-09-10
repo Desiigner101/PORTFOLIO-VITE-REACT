@@ -34,6 +34,17 @@ const projects = [
 
     },
 
+    {
+        id:4,
+        title:  "Android Mobile Application",
+        description: "Final project for Mobile Development class, developed independently using Kotlin in Android Studio. This project marked my first solo application build and a key step in strengthening my mobile development skills.",
+        image: "/projects/MOBILE_APP_PROJECT3.png",
+        tags: ["Kotlin", "Android Studio", "GitHub"],
+        demoUrl: "#",
+        githubUrl: "https://github.com/Desiigner101/GenBuild",
+
+    },
+
     
 ]
 
