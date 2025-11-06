@@ -39,9 +39,20 @@ const projects = [
         title:  "GenBuild POS v1.0",
         description: "A student-built Retail Billing Software inspired by my GenBuild app and Figma designs, my first ever POS system using React.js & Spring Boot, made as a humble step in learning full-stack development.",
         image: "/projects/genbuild_version1.png",
-        tags: ["Javascript", "React", "Vite", "Springboot", "REST API"],
+        tags: ["Django", "Python", "Javascript", "REST API"],
         demoUrl: "#",
         githubUrl: "https://github.com/Desiigner101/GENBUILD-POS",
+
+    },
+
+    {
+        id:5,
+        title:  "Stunotes",
+        description: "A lightweight web application designed to help students manage academic tasks, deadlines, and notes in one platform. It allows users to create, edit, and track assignments, add class notes, and receive reminders for important school activities. This system promotes organization, time management, and academic productivity.",
+        image: "/projects/stunotes.png",
+        tags: ["Django", "Python", "Javascript", "REST API"],
+        demoUrl: "https://csit-327-g8-stunotes.vercel.app/",
+        githubUrl: "https://github.com/Desiigner101/CSIT327-G8-STUNOTES",
 
     },
 
