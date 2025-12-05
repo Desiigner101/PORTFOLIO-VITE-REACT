@@ -48,11 +48,21 @@ const projects = [
     {
         id:5,
         title:  "Stunotes",
-        description: "A lightweight web application designed to help students manage academic tasks, deadlines, and notes in one platform. It allows users to create, edit, and track assignments, add class notes, and receive reminders for important school activities. This system promotes organization, time management, and academic productivity.",
+        description: "A full-stack web application designed to help students manage academic tasks, deadlines, and notes in one platform. It allows users to create, edit, and track assignments, add class notes, and receive reminders for important school activities. This system promotes organization, time management, and academic productivity.",
         image: "/projects/stunotes.png",
-        tags: ["Django", "Python", "Javascript", "REST API"],
+        tags: ["Django", "Python", "Javascript", "REST API", "Cloudinary", "SupaBase"],
         demoUrl: "https://csit-327-g8-stunotes.vercel.app/",
         githubUrl: "https://github.com/Desiigner101/CSIT327-G8-STUNOTES",
+
+    },
+    {
+        id:6,
+        title:  "EquiTrack",
+        description: "A full-stack financial-tracking web application powered by React & Vite on the frontend and Spring Boot on the backend. Users can manage income, expenses, budgets, and multiple wallets through a seamless REST API. Featuring interactive dashboards, detailed visualizations, dynamic filters, and a sleek, responsive UI, this app delivers a fast and intuitive way to monitor personal finances.",
+        image: "/projects/Equitrack.png",
+        tags: ["Springboot", "React", "Vite", , "Javascript", "Java", "REST API", "Cloudinary", "Brevo", "PostgreSQL"],
+        demoUrl: "https://equitrack-webapp.vercel.app/",
+        githubUrl: "https://github.com/Desiigner101/EQUITRACK-WEBAPP",
 
     },
 

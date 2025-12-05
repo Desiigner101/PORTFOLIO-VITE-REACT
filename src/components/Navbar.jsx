@@ -20,25 +20,48 @@ export const Navbar = () => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10)
             
-            // Track active section
-            const sections = navItems.map(item => item.href.substring(1)); // Remove # from href
-            const currentSection = sections.find(section => {
+            // Track active section with better logic
+            const sections = navItems.map(item => item.href.substring(1));
+            
+            // Find which section is currently in view
+            for (const section of sections) {
                 const element = document.getElementById(section);
                 if (element) {
                     const rect = element.getBoundingClientRect();
-                    return rect.top <= 100 && rect.bottom >= 100;
+                    // Check if section is in the viewport (with offset for navbar)
+                    if (rect.top <= 150 && rect.bottom >= 150) {
+                        setActiveSection(section);
+                        break;
+                    }
                 }
-                return false;
-            });
-            
-            if (currentSection) {
-                setActiveSection(currentSection);
             }
         }
 
+        // Run on mount to set initial active section
+        handleScroll();
+        
         window.addEventListener("scroll", handleScroll)
         return () => window.removeEventListener("scroll", handleScroll)
     }, [])
+
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        setIsMenuOpen(false);
+        
+        const targetId = href.substring(1);
+        const element = document.getElementById(targetId);
+        
+        if (element) {
+            const offset = 80; // Adjust based on your navbar height
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+    }
 
     return (
         <nav 
@@ -49,10 +72,10 @@ export const Navbar = () => {
                 : "py-5 bg-background/90 backdrop-blur-sm"
          )}
          >
-
             <div className="container flex items-center justify-between">
                 <a className="text-xl font-bold text-primary flex items-center" 
                 href="#hero"
+                onClick={(e) => handleNavClick(e, "#hero")}
                 >
                     <span className="relative z-10">
                         <span className="text-glow text-foreground">Desiigner</span> Portfolio
@@ -62,15 +85,16 @@ export const Navbar = () => {
                 {/*desktop version navbar*/}
                 <div className="hidden md:flex space-x-8">
                     {navItems.map((item, key) => {
-                        const sectionId = item.href.substring(1); // Remove # from href
+                        const sectionId = item.href.substring(1);
                         const isActive = activeSection === sectionId;
                         
                         return (
                             <a 
                             key={key} 
-                            href={item.href} 
+                            href={item.href}
+                            onClick={(e) => handleNavClick(e, item.href)}
                             className={cn(
-                                "transition-colors duration-300 relative group",
+                                "transition-colors duration-300 relative group cursor-pointer",
                                 isActive 
                                     ? "text-primary" 
                                     : "text-foreground/80 hover:text-primary"
@@ -91,36 +115,32 @@ export const Navbar = () => {
                 {/*mobile nav navbar*/}
                 <button 
                 onClick={() => setIsMenuOpen((prev) => !prev)} 
-                className="md:hidden p-2 text-foreground z-50 hover:bg-muted/50 rounded-md transition-colors duration-200"
+                className="md:hidden p-2 text-foreground relative z-50 hover:bg-muted/50 rounded-md transition-colors duration-200"
                 aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
                 >
                     {isMenuOpen ? <X size={24}/> : <Menu size={24}/>}
                 </button>
+            </div>
 
-                <div className={cn(
-                    "fixed inset-0 bg-background/98 backdrop-blur-md z-40 flex flex-col items-center justify-center",
-                    "transition-all duration-300 md:hidden",
-                    isMenuOpen 
-                    ? "opacity-100 pointer-events-auto" 
-                    : "opacity-0 pointer-events-none"
-                    )}
-                >
-                    <div className="flex flex-col space-y-8 text-xl">
+            {/* Mobile menu overlay */}
+            {isMenuOpen && (
+                <div className="fixed inset-0 bg-background/98 backdrop-blur-md flex flex-col items-center justify-center md:hidden z-[100] animate-in fade-in duration-300">
+                    <div className="flex flex-col space-y-6 text-lg">
                         {navItems.map((item, key) => {
-                            const sectionId = item.href.substring(1); // Remove # from href
+                            const sectionId = item.href.substring(1);
                             const isActive = activeSection === sectionId;
                             
                             return (
                                 <a 
                                 key={key} 
-                                href={item.href} 
+                                href={item.href}
+                                onClick={(e) => handleNavClick(e, item.href)}
                                 className={cn(
-                                    "transition-colors duration-300 text-center py-2 px-4 rounded-md",
+                                    "transition-colors duration-300 text-center py-3 px-6 rounded-md cursor-pointer",
                                     isActive 
                                         ? "text-primary bg-muted/50" 
                                         : "text-foreground/80 hover:text-primary hover:bg-muted/50"
                                 )}
-                                onClick={() => setIsMenuOpen(false)}
                                 >
                                     {item.name}
                                 </a>
@@ -128,7 +148,7 @@ export const Navbar = () => {
                         })}
                     </div>
                 </div>
-            </div>
+            )}
          </nav>
         );
 };
