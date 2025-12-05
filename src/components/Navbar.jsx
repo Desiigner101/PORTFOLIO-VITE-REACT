@@ -75,6 +75,15 @@ export const Navbar = () => {
          >
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between">
+                    {/*mobile nav navbar - moved to left*/}
+                    <button 
+                    onClick={() => setIsMenuOpen((prev) => !prev)} 
+                    className="md:hidden p-2.5 text-foreground relative z-[110] hover:bg-primary/10 rounded-lg transition-all duration-200 border border-border/50 order-first"
+                    aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+                    >
+                        {isMenuOpen ? <X size={24}/> : <Menu size={24}/>}
+                    </button>
+
                     <a className="text-xl md:text-2xl font-bold text-primary flex items-center hover:opacity-80 transition-opacity" 
                     href="#hero"
                     onClick={(e) => handleNavClick(e, "#hero")}
@@ -108,15 +117,6 @@ export const Navbar = () => {
                             );
                         })}
                     </div>
-
-                    {/*mobile nav navbar*/}
-                    <button 
-                    onClick={() => setIsMenuOpen((prev) => !prev)} 
-                    className="md:hidden p-2.5 text-foreground relative z-50 hover:bg-primary/10 rounded-lg transition-all duration-200 border border-border/50"
-                    aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-                    >
-                        {isMenuOpen ? <X size={24}/> : <Menu size={24}/>}
-                    </button>
                 </div>
             </div>
          </nav>
@@ -149,13 +149,13 @@ export const Navbar = () => {
                     </div>
                 </div>
                 
-                {/* Close button - positioned beside theme toggle with higher z-index */}
+                {/* Close button - positioned on the left side to avoid theme toggle */}
                 <button 
                     onClick={() => setIsMenuOpen(false)}
-                    className="fixed top-4 right-20 p-3 text-foreground hover:bg-primary/10 rounded-lg transition-all duration-200 border border-border/50 z-[60] bg-muted/90 backdrop-blur-sm shadow-lg md:hidden"
+                    className="fixed top-4 left-4 p-3 text-foreground hover:bg-primary/10 rounded-lg transition-all duration-200 border border-border/50 z-[60] bg-muted/90 backdrop-blur-sm shadow-lg md:hidden"
                     aria-label="Close Menu"
                 >
-                    <X size={20} />
+                    <X size={24} />
                 </button>
                 </>
             )}
