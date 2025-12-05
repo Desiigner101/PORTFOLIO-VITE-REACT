@@ -44,7 +44,7 @@ export const ThemeToggle = () => {
   // Prevent flash of wrong theme
   if (!mounted) {
     return (
-      <div className="fixed top-4 right-4 z-[100] p-3 rounded-full bg-muted/50 backdrop-blur-sm">
+      <div className="hidden md:block fixed top-4 right-4 z-[100] p-3 rounded-full bg-muted/50 backdrop-blur-sm">
         <div className="h-5 w-5" />
       </div>
     );
@@ -54,7 +54,7 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed top-4 right-4 z-[100] p-3 rounded-full transition-all duration-300",
+        "hidden md:block fixed top-4 right-4 z-[100] p-3 rounded-full transition-all duration-300",
         "bg-muted/50 backdrop-blur-sm hover:bg-muted hover:scale-110",
         "border border-border/50 hover:border-primary/50",
         "shadow-lg hover:shadow-primary/20"
