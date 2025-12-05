@@ -9,28 +9,28 @@ import { ContactSection } from "../components/ContactSection"
 import { Footer } from "../components/Footer"
 
 export const Home = () => {
-    return <div className = "min-h-screen" bg-background text-foreground overflow-x-hidden>
+    return (
+        <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+            {/* Theme Toggle */}
+            <ThemeToggle />
 
-        {/*Theme Toggle */}
-        <ThemeToggle />
+            {/* Background Effects */}
+            <StartBackground />
 
-        {/*Background Effects */}
-        <StartBackground />
+            {/* Navbar */}
+            <Navbar />
 
-        {/* Navbar */}
-        <Navbar />
+            {/* Main Content */}
+            <main>
+                <HeroSection />
+                <AboutSection />
+                <SkillsSection />
+                <ProjectsSections />
+                <ContactSection />
+            </main>
 
-        {/* Main Content */}
-        <main>
-            <HeroSection />
-            <AboutSection />
-            <SkillsSection />
-            <ProjectsSections />
-            <ContactSection />
-        </main>
-
-        {/* Footer */}
-        <Footer />
-
-    </div>
+            {/* Footer */}
+            <Footer />
+        </div>
+    )
 }

@@ -90,10 +90,12 @@
 
     --card: 0 0% 100%;
 
-    --primary: 210 90% 60%
+    --primary: 210 90% 60%;
     --primary-foreground: 210 40% 98%;
 
     --border: 217 32% 91%;
+    
+    --secondary: 210 40% 96%;
   }
 
   .dark {
@@ -102,10 +104,12 @@
 
     --card: 222 47% 8%;
 
-    --primary: 210 90% 55%;
+    --primary: 189 94% 43%;
     --primary-foreground: 213 31% 91%;
 
     --border: 217 33% 20%;
+    
+    --secondary: 222 47% 11%;
   }
 
   * {
@@ -170,17 +174,50 @@
 }
 
 @utility star{
-  @apply absolute rounded-full bg-white;
+  @apply absolute rounded-full;
+}
+
+/* Light mode stars - dark/black */
+:root .star {
+  background: #1e293b;
+  box-shadow: 0 0 8px 2px rgba(30, 41, 59, 0.4);
+}
+
+/* Dark mode stars - white */
+.dark .star {
+  background: white;
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
 }
 
 @utility meteor{
-  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
+  @apply absolute rounded-full;
+}
+
+/* Light mode meteors - dark */
+:root .meteor {
+  background: linear-gradient(to right, #1e293b, #475569, transparent);
+  box-shadow: 0 0 8px 3px rgba(30, 41, 59, 0.3);
+}
+
+/* Dark mode meteors - white */
+.dark .meteor {
+  background: linear-gradient(to right, white, white, transparent);
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
 @utility stars{
-  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
+  @apply absolute rounded-full;
+}
+
+/* Light mode shooting stars - dark */
+:root .stars {
+  background: linear-gradient(to right, #1e293b, #475569, transparent);
+  box-shadow: 0 0 8px 3px rgba(30, 41, 59, 0.3);
+}
+
+/* Dark mode shooting stars - white */
+.dark .stars {
+  background: linear-gradient(to right, white, white, transparent);
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
