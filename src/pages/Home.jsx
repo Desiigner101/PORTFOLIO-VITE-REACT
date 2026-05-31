@@ -7,10 +7,17 @@ import { SkillsSection } from "../components/SkillsSection"
 import { ProjectsSections } from "../components/ProjectsSection"
 import { ContactSection } from "../components/ContactSection"
 import { Footer } from "../components/Footer"
+import { ScrollProgress } from "../components/ScrollProgress"
+import { useScrollReveal } from "../lib/useScrollReveal"
 
 export const Home = () => {
+    useScrollReveal();
+
     return (
         <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+            {/* Scroll progress bar */}
+            <ScrollProgress />
+
             {/* Theme Toggle */}
             <ThemeToggle />
 

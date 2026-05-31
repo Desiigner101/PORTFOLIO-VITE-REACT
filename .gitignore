@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Large APKs hosted on GitHub Releases (too big to commit; >100MB is rejected by GitHub)
+public/apks/AkAI*.apk
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

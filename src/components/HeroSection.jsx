@@ -1,44 +1,90 @@
-import { ArrowDown } from "lucide-react"
+import { ArrowDown, Mail, Github, Linkedin, Facebook } from "lucide-react"
 
-// This is the Hero Section component – the first section users see on your portfolio
+const socials = [
+    { href: "https://github.com/Desiigner101", icon: Github, label: "GitHub" },
+    { href: "https://www.linkedin.com/in/gino-sarsonas-4479a52a4/", icon: Linkedin, label: "LinkedIn" },
+    { href: "https://www.facebook.com/gino.sarsonas", icon: Facebook, label: "Facebook" },
+]
+
 export const HeroSection = () => {
     return (
-        <section 
-            id="hero" 
-            className="relative min-h-screen flex flex-col items-center justify-center px-4"
+        <section
+            id="hero"
+            className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden"
         >
-            {/* Container for all hero content, centered and with max width */}
-            <div className="container max-w-4xl mx-auto text-center z-10">
-                <div className="space-y-6">
-                    
-                    {/* Heading with my name and fade-in animations */}
-                    <h1 className="text-4xl md:text-6l font-bold tracking-tight">
-                        {/* Fade-in delay animations make text appear one after another */}
-                        <span className="opacity-0 animate-fade-in"> Hi! I'm</span>
-                        <span className="text-primary opacity-0 animate-fade-in-delay-1"> Gino</span>
-                        <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Sarsonas</span>
-                    </h1>
+            {/* Ambient glow orbs */}
+            <div className="glow-orb w-[28rem] h-[28rem] bg-primary/20 top-1/4 -left-20 animate-float" />
+            <div
+                className="glow-orb w-[22rem] h-[22rem] bg-cyan-400/15 bottom-1/4 -right-10 animate-float"
+                style={{ animationDelay: "2s" }}
+            />
 
-                    {/* Short introduction text with fade-in animation */}
-                    <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                        I am an Information Technology student pursuing a Bachelor’s degree, 
-                        passionate about technology and eager to apply my skills to real-world solutions.
-                        My journey is driven by continuous learning, innovation, and professional growth.
+            <div className="container max-w-3xl mx-auto text-center z-10">
+                <div className="space-y-8">
+
+                    {/* Availability badge */}
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm text-sm text-primary opacity-0 animate-fade-in">
+                        <span className="relative flex h-2 w-2">
+                            <span className="absolute inline-flex h-full w-full rounded-full bg-primary opacity-75 animate-ping" />
+                            <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+                        </span>
+                        Available for opportunities
+                    </div>
+
+                    {/* Name & role */}
+                    <div className="space-y-3 opacity-0 animate-fade-in-delay-1">
+                        <p className="text-muted-foreground text-lg">Hi, I&apos;m</p>
+                        <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+                            <span className="text-foreground">Gino </span>
+                            <span className="text-gradient">Sarsonas</span>
+                        </h1>
+                        <p className="text-lg md:text-xl text-muted-foreground font-light">
+                            IT Student &amp; Developer
+                        </p>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed opacity-0 animate-fade-in-delay-2">
+                        3rd-year BSIT student with a passion for building clean, functional
+                        web and mobile applications. I love turning ideas into real-world solutions.
                     </p>
 
-                    {/* Call-to-action button that links to projects section */}
-                    <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+                    {/* CTAs */}
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3 opacity-0 animate-fade-in-delay-3">
                         <a href="#projects" className="cosmic-button">
                             View My Work
                         </a>
+                        <a
+                            href="#contacts"
+                            className="px-6 py-2.5 rounded-full border border-border hover:border-primary text-foreground hover:text-primary transition-all duration-300 inline-flex items-center gap-2 font-medium"
+                        >
+                            <Mail size={15} />
+                            Get In Touch
+                        </a>
+                    </div>
+
+                    {/* Social quick links */}
+                    <div className="flex items-center justify-center gap-3 opacity-0 animate-fade-in-delay-4">
+                        {socials.map(({ href, icon: Icon, label }) => (
+                            <a
+                                key={label}
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={label}
+                                className="p-2.5 rounded-lg border border-border/60 text-muted-foreground hover:text-primary hover:border-primary/50 hover:bg-primary/5 hover:-translate-y-0.5 transition-all duration-200"
+                            >
+                                <Icon size={18} />
+                            </a>
+                        ))}
                     </div>
                 </div>
             </div>
 
-            {/* Scroll indicator at the bottom with a bouncing arrow */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-                <span className="text-sm text-muted-foreground mb-2">Scroll</span>
-                <ArrowDown className="h-5 w-5 text-primary"></ArrowDown>
+            {/* Scroll indicator */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-50">
+                <span className="text-xs text-muted-foreground tracking-widest uppercase">Scroll</span>
+                <ArrowDown className="h-4 w-4 text-muted-foreground" />
             </div>
         </section>
     )

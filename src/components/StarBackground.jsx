@@ -61,7 +61,7 @@ export const StartBackground = () => {
             });
         }
 
-        setShootingStars(shootingStars);
+        setShootingStars(newShootingStars);
     };
 
     //function that generate meteors in the background 
