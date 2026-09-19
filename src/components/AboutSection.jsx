@@ -1,15 +1,29 @@
-import { Code, Globe, GraduationCap, Laptop2 } from "lucide-react";
+import { BrainCircuit, Globe, GraduationCap, Laptop2 } from "lucide-react";
+import { useCountUp } from "../lib/useCountUp";
+
+// A single stat that counts up from 0 to its value when scrolled into view.
+const StatCard = ({ value, label }) => {
+    const { ref, display } = useCountUp(value);
+    return (
+        <div className="gradient-border p-5 text-center card-hover">
+            <p ref={ref} className="text-3xl md:text-4xl font-bold text-gradient mb-1">
+                {display}
+            </p>
+            <p className="text-xs md:text-sm text-muted-foreground">{label}</p>
+        </div>
+    );
+};
 
 const cards = [
     {
-        icon: Code,
-        title: "Learning to Create",
-        desc: "Building responsive websites and apps with modern frameworks and tools.",
+        icon: BrainCircuit,
+        title: "Machine Learning",
+        desc: "Building AkAI, an LSTM-based Filipino Sign Language recognition model with TensorFlow and MediaPipe.",
     },
     {
         icon: Laptop2,
-        title: "Driven by Projects",
-        desc: "I enjoy building full-stack apps — from concept to deployment.",
+        title: "Full-Stack & Mobile",
+        desc: "I enjoy building full-stack web and native mobile apps, from concept to deployment.",
     },
     {
         icon: GraduationCap,
@@ -24,10 +38,10 @@ const cards = [
 ];
 
 const stats = [
-    { value: "9+", label: "Projects Built" },
-    { value: "3rd", label: "Year BSIT" },
-    { value: "15+", label: "Technologies" },
-    { value: "∞", label: "Curiosity" },
+    { value: "10+", label: "Projects Built" },
+    { value: "1", label: "Published App" },
+    { value: "4th", label: "Year BSIT" },
+    { value: "20+", label: "Technologies" },
 ];
 
 export const AboutSection = () => {
@@ -42,20 +56,10 @@ export const AboutSection = () => {
                     </h2>
                 </div>
 
-                {/* Stats strip */}
+                {/* Stats strip, counts up on scroll into view */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16 reveal">
                     {stats.map((stat) => (
-                        <div
-                            key={stat.label}
-                            className="gradient-border p-5 text-center card-hover"
-                        >
-                            <p className="text-3xl md:text-4xl font-bold text-gradient mb-1">
-                                {stat.value}
-                            </p>
-                            <p className="text-xs md:text-sm text-muted-foreground">
-                                {stat.label}
-                            </p>
-                        </div>
+                        <StatCard key={stat.label} value={stat.value} label={stat.label} />
                     ))}
                 </div>
 
@@ -68,11 +72,12 @@ export const AboutSection = () => {
                         </h3>
 
                         <p className="text-muted-foreground leading-relaxed">
-                            As a student pursuing a Bachelor of Science in Information Technology,
-                            I have developed a strong passion for exploring the ever-evolving world
-                            of technology. My academic journey has introduced me to various fields
-                            such as programming, systems development, and problem-solving — all of
-                            which have strengthened my technical foundation and analytical thinking.
+                            As a 4th-year student pursuing a Bachelor of Science in Information
+                            Technology, I have developed a strong passion for building real-world
+                            software, from full-stack web apps to native mobile applications. My
+                            capstone, AkAI, dives into machine learning to recognize Filipino Sign
+                            Language, strengthening my foundation in both engineering and analytical
+                            problem-solving.
                         </p>
 
                         <p className="text-muted-foreground leading-relaxed">
@@ -92,7 +97,9 @@ export const AboutSection = () => {
                                 Get In Touch
                             </a>
                             <a
-                                href=""
+                                href="/resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="px-6 py-2.5 rounded-full border border-border hover:border-primary text-foreground hover:text-primary transition-all duration-300 font-medium inline-flex items-center justify-center"
                             >
                                 Download CV

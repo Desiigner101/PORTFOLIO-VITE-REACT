@@ -1,4 +1,4 @@
-import { ArrowDown, Mail, Github, Linkedin, Facebook } from "lucide-react"
+import { ArrowDown, Mail, Github, Linkedin, Facebook, FileText } from "lucide-react"
 
 const socials = [
     { href: "https://github.com/Desiigner101", icon: Github, label: "GitHub" },
@@ -39,14 +39,15 @@ export const HeroSection = () => {
                             <span className="text-gradient">Sarsonas</span>
                         </h1>
                         <p className="text-lg md:text-xl text-muted-foreground font-light">
-                            IT Student &amp; Developer
+                            Mobile &amp; Full-Stack Developer &middot; ML Enthusiast
                         </p>
                     </div>
 
                     {/* Description */}
                     <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed opacity-0 animate-fade-in-delay-2">
-                        3rd-year BSIT student with a passion for building clean, functional
-                        web and mobile applications. I love turning ideas into real-world solutions.
+                        4th-year BSIT student passionate about building clean, functional web
+                        and mobile applications. Currently developing AkAI, a machine-learning
+                        Filipino Sign Language assistant, turning ideas into real-world solutions.
                     </p>
 
                     {/* CTAs */}
@@ -60,6 +61,15 @@ export const HeroSection = () => {
                         >
                             <Mail size={15} />
                             Get In Touch
+                        </a>
+                        <a
+                            href="/resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-6 py-2.5 rounded-full border border-border hover:border-primary text-foreground hover:text-primary transition-all duration-300 inline-flex items-center gap-2 font-medium"
+                        >
+                            <FileText size={15} />
+                            Resume
                         </a>
                     </div>
 

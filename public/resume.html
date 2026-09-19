@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kervin Gino M. Sarsonas Resume</title>
+<style>
+    :root {
+        --ink: #1a1a2e;
+        --muted: #555;
+        --accent: #2E9EF7;
+        --line: #e2e2e8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        color: var(--ink);
+        line-height: 1.5;
+        font-size: 13.5px;
+        background: #f4f5f7;
+        padding: 24px;
+    }
+    .page {
+        max-width: 800px;
+        margin: 0 auto;
+        background: #fff;
+        padding: 44px 48px;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    /* Header */
+    header { border-bottom: 3px solid var(--accent); padding-bottom: 16px; margin-bottom: 20px; }
+    header h1 { font-size: 30px; letter-spacing: -0.5px; font-weight: 700; }
+    header .role { color: var(--accent); font-weight: 600; font-size: 14.5px; margin-top: 2px; }
+    .contact {
+        margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px 18px;
+        font-size: 12.5px; color: var(--muted);
+    }
+    .contact a { color: var(--muted); text-decoration: none; }
+    .contact span { display: inline-flex; align-items: center; gap: 5px; }
+
+    /* Sections */
+    section { margin-bottom: 20px; }
+    h2 {
+        font-size: 12.5px; text-transform: uppercase; letter-spacing: 1.5px;
+        color: var(--accent); font-weight: 700; margin-bottom: 10px;
+        border-bottom: 1px solid var(--line); padding-bottom: 4px;
+    }
+
+    .summary { color: var(--muted); }
+
+    /* Entry (jobs/education/projects) */
+    .entry { margin-bottom: 13px; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    .entry-title { font-weight: 700; font-size: 13.5px; }
+    .entry-sub { color: var(--accent); font-weight: 600; font-size: 12.5px; }
+    .entry-date { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .entry ul { margin: 5px 0 0 16px; }
+    .entry li { margin-bottom: 2px; color: var(--muted); }
+    .entry p.desc { color: var(--muted); margin-top: 3px; }
+    .tags { margin-top: 4px; font-size: 11.5px; color: #777; font-style: italic; }
+
+    /* Skills grid */
+    .skills-grid { display: grid; grid-template-columns: 130px 1fr; gap: 5px 14px; }
+    .skills-grid .cat { font-weight: 700; font-size: 12.5px; }
+    .skills-grid .list { color: var(--muted); }
+
+    a.link { color: var(--accent); text-decoration: none; }
+
+    @media print {
+        body { background: #fff; padding: 0; font-size: 12.5px; }
+        .page { box-shadow: none; max-width: 100%; padding: 28px 34px; }
+        @page { margin: 12mm; }
+    }
+</style>
+</head>
+<body>
+<div class="page">
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <h1>Kervin Gino M. Sarsonas</h1>
+        <div class="role">Mobile &amp; Full-Stack Developer &nbsp;•&nbsp; Machine Learning Enthusiast</div>
+        <div class="contact">
+            <span>📧 <a href="mailto:desiigner4074@gmail.com">desiigner4074@gmail.com</a></span>
+            <span>📱 0921 201 0166</span>
+            <span>📍 Cebu City, Philippines</span>
+            <span>💻 <a href="https://github.com/desiigner101">github.com/desiigner101</a></span>
+            <span>🔗 <a href="https://www.linkedin.com/in/gino-sarsonas-4479a52a4/">linkedin.com/in/gino-sarsonas</a></span>
+        </div>
+    </header>
+
+    <!-- ===== SUMMARY ===== -->
+    <section>
+        <h2>Summary</h2>
+        <p class="summary">
+            Fourth-year BSIT student and hands-on developer who ships real, deployed software
+            across mobile, full-stack web, and machine learning. Built and published AkAI, a
+            two-way Filipino Sign Language communication assistant powered by an LSTM recognition
+            model, now live on Google Play. Comfortable owning a project end to end, from data
+            and model training to native Android delivery and REST-backed web systems.
+        </p>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section>
+        <h2>Education</h2>
+        <div class="entry">
+            <div class="entry-head">
+                <div>
+                    <div class="entry-title">Cebu Institute of Technology-University</div>
+                    <div class="entry-sub">Bachelor of Science in Information Technology</div>
+                </div>
+                <div class="entry-date">Expected 2027</div>
+            </div>
+            <p class="desc">Cebu City, Philippines &nbsp;•&nbsp; Currently 4th Year</p>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section>
+        <h2>Experience</h2>
+        <div class="entry">
+            <div class="entry-head">
+                <div>
+                    <div class="entry-title">Technical Support</div>
+                    <div class="entry-sub">Cebu Archdiocesan Commission on Environmental Concerns</div>
+                </div>
+                <div class="entry-date">2020 – 2022</div>
+            </div>
+            <ul>
+                <li>Provided hardware and software technical support to staff and office systems.</li>
+                <li>Troubleshot and maintained computers and peripherals to keep daily operations running.</li>
+                <li>Assisted with setup, configuration, and basic system administration tasks.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section>
+        <h2>Featured Projects</h2>
+
+        <div class="entry">
+            <div class="entry-head">
+                <div class="entry-title">AkAI: Two-Way Filipino Sign Language Assistant</div>
+                <div class="entry-date">Capstone • Live on Google Play</div>
+            </div>
+            <p class="desc">
+                A mobile app bridging communication between Deaf and hearing users on a single
+                device, combining real-time sign-to-text recognition with offline speech-to-text
+                into a shared conversation thread. Trained and evaluated the LSTM model with a
+                signer-independent (leave-one-signer-out) split for honest, real-world accuracy.
+            </p>
+            <p class="tags">Kotlin • TensorFlow • Keras • MediaPipe • Vosk • LSTM • OpenCV</p>
+        </div>
+
+        <div class="entry">
+            <div class="entry-head">
+                <div class="entry-title">QuickInvoice: Web &amp; Mobile Invoicing Platform</div>
+                <div class="entry-date">Systems Integration</div>
+            </div>
+            <p class="desc">
+                Full-stack invoice management with 10 customizable templates, email/PDF generation,
+                and Stripe-powered subscriptions. React + Vite web client and a native Kotlin (MVP)
+                Android app, both backed by a Spring Boot + MongoDB Atlas API.
+            </p>
+            <p class="tags">React • Vite • Kotlin • Spring Boot • MongoDB • Stripe • REST API</p>
+        </div>
+
+        <div class="entry">
+            <div class="entry-head">
+                <div class="entry-title">EquiTrack: Financial Tracking Web App</div>
+                <div class="entry-date">Full-Stack</div>
+            </div>
+            <p class="desc">
+                A responsive financial-tracking application with interactive dashboards,
+                visualizations, and dynamic filters. React + Vite frontend with a Spring Boot
+                backend and PostgreSQL.
+            </p>
+            <p class="tags">Spring Boot • React • Vite • Java • PostgreSQL • REST API</p>
+        </div>
+
+        <div class="entry">
+            <div class="entry-head">
+                <div class="entry-title">Stunotes: Student Productivity Platform</div>
+                <div class="entry-date">Full-Stack</div>
+            </div>
+            <p class="desc">
+                A web app for managing academic tasks, deadlines, and notes, with assignment
+                tracking, class notes, and reminders. Django backend with cloud media storage.
+            </p>
+            <p class="tags">Django • Python • JavaScript • REST API • Supabase • Cloudinary</p>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="cat">Languages</div>
+            <div class="list">Java, Kotlin, Python, JavaScript, C</div>
+
+            <div class="cat">Machine Learning</div>
+            <div class="list">TensorFlow, Keras, MediaPipe, OpenCV, NumPy, scikit-learn</div>
+
+            <div class="cat">Frontend</div>
+            <div class="list">React, Vite, Tailwind CSS, HTML5, CSS3, Bootstrap</div>
+
+            <div class="cat">Backend &amp; Data</div>
+            <div class="list">Spring Boot, Django, Node.js, REST APIs, MySQL, PostgreSQL, MongoDB</div>
+
+            <div class="cat">Tools &amp; IDEs</div>
+            <div class="list">Git &amp; GitHub, Android Studio, IntelliJ IDEA, VS Code, Postman, Figma</div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section>
+        <h2>Certifications &amp; Interests</h2>
+        <div class="entry">
+            <div class="entry-head">
+                <div class="entry-title">CMAS Open Water Scuba Diver</div>
+                <div class="entry-date">Since June 2023</div>
+            </div>
+            <p class="desc">
+                Interests: mobile &amp; ML application development, PC building, athletics, and the outdoors.
+            </p>
+        </div>
+    </section>
+
+</div>
+</body>
+</html>

@@ -4,61 +4,26 @@ import { ArrowRight, Download, ExternalLink, Github, Grid3x3, ImageOff, List } f
 const projects = [
     {
         id: 1,
-        title: "Object-Oriented Programming 2 Project",
-        description: "An OOP2 Project made by me and friends Daniel, Sophia, Ashley, Michelle and is also our finals project made with IntelliJ and Java, we also utilized libGDX as our game framework.",
-        image: "/projects/OOP2_PROJECT_VORTEX1.png",
-        tags: ["IntelliJ", "Java", "GitHub", "libGDX"],
-        githubUrl: "https://github.com/Desiigner101/Vortex",
-        hideDemo: true,
+        title: "AkAI: Filipino Sign Language Assistant",
+        description: "My capstone project (IT332). A two-way Filipino Sign Language communication assistant that bridges conversations between Deaf and hearing users on a single device, combining real-time sign-to-text recognition with speech-to-text into a shared conversation thread. Fully offline and live on Google Play.",
+        image: "/projects/akai.png",
+        tags: ["Kotlin", "TensorFlow", "MediaPipe", "Vosk", "Offline", "Speech-to-Text"],
+        demoUrl: "#",
+        githubUrl: "https://github.com/Desiigner101/AkAI-Android",
+        apkUrl: "https://github.com/Desiigner101/AkAI-Android/releases/latest/download/akai.apk",
     },
     {
         id: 2,
-        title: "Figma Mobile App Mockup Design",
-        description: "A mockup design for my Platform-based Development class project made using Figma, and is very useful for my sequel project integrating the design into my mobile app project.",
-        image: "/projects/FIGMA_PROJECT_GENBUILD.png",
-        tags: ["Figma", "Canva"],
-        demoUrl: "https://www.figma.com/proto/qKyHBP0uGtCZ8kGh8rk4FB/Mobile-App--GenBuild-?t=QnitkeHVnKmX60gI-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=89-452&starting-point-node-id=89%3A452",
-        githubUrl: "#",
-    },
-    {
-        id: 3,
-        title: "Android Mobile Application",
-        description: "Final project for Mobile Development class, developed independently using Kotlin in Android Studio. This project marked my first solo application build and a key step in strengthening my mobile development skills.",
-        image: "/projects/MOBILE_APP_PROJECT3.png",
-        tags: ["Kotlin", "Android Studio", "GitHub"],
+        title: "AkAI LSTM Recognition Model",
+        description: "The deep-learning core of AkAI, an LSTM-based model that classifies Filipino Sign Language gestures in near real-time. Built with TensorFlow/Keras and MediaPipe for hand and pose landmark extraction, and rigorously evaluated with a signer-independent (leave-one-signer-out) split for honest, real-world accuracy.",
+        image: "/projects/akai_model.png",
+        tags: ["Python", "TensorFlow", "Keras", "MediaPipe", "LSTM", "OpenCV"],
         demoUrl: "#",
-        githubUrl: "https://github.com/Desiigner101/GenBuild",
-    },
-    {
-        id: 4,
-        title: "GenBuild POS v1.0",
-        description: "A student-built Retail Billing Software inspired by my GenBuild app and Figma designs, my first ever POS system using React.js & Spring Boot, made as a humble step in learning full-stack development.",
-        image: "/projects/genbuild_version1.png",
-        tags: ["Django", "Python", "Javascript", "REST API"],
-        demoUrl: "#",
-        githubUrl: "https://github.com/Desiigner101/GENBUILD-POS",
+        githubUrl: "https://github.com/Desiigner101/linkfsl-model",
         hideDemo: true,
     },
     {
-        id: 5,
-        title: "Stunotes",
-        description: "A full-stack web application designed to help students manage academic tasks, deadlines, and notes in one platform. It allows users to create, edit, and track assignments, add class notes, and receive reminders for important school activities.",
-        image: "/projects/stunotes.png",
-        tags: ["Django", "Python", "Javascript", "REST API", "Cloudinary", "SupaBase"],
-        demoUrl: "https://csit-327-g8-stunotes.vercel.app/",
-        githubUrl: "https://github.com/Desiigner101/CSIT327-G8-STUNOTES",
-    },
-    {
-        id: 6,
-        title: "EquiTrack",
-        description: "A full-stack financial-tracking web application powered by React & Vite on the frontend and Spring Boot on the backend. Features interactive dashboards, detailed visualizations, dynamic filters, and a sleek, responsive UI.",
-        image: "/projects/Equitrack.png",
-        tags: ["Springboot", "React", "Vite", "Java", "REST API", "PostgreSQL"],
-        demoUrl: "https://equitrack-webapp.vercel.app/",
-        githubUrl: "https://github.com/Desiigner101/EQUITRACK-WEBAPP",
-    },
-    {
-        id: 7,
+        id: 3,
         title: "Quick Invoice Web App",
         description: "A full-stack invoice management web app built for Systems Integration (IT342). Users can create, edit, and manage invoices with 10 customizable templates, send them via email as PDFs, and unlock premium features through Stripe-powered subscriptions. Powered by a React + Vite frontend and a Spring Boot + MongoDB Atlas backend.",
         image: "/projects/quickinvoice_web.png",
@@ -67,34 +32,69 @@ const projects = [
         githubUrl: "https://github.com/Desiigner101/INVOICE-GEN",
     },
     {
-        id: 8,
+        id: 4,
         title: "Quick Invoice Mobile",
-        description: "The Android companion to the QuickInvoice web app, built natively in Kotlin using MVP architecture. Features full invoice CRUD, 10 HTML invoice templates, email/PDF generation, and Stripe-powered subscription payments — all backed by the same Spring Boot + MongoDB Atlas API.",
+        description: "The Android companion to the QuickInvoice web app, built natively in Kotlin using MVP architecture. Features full invoice CRUD, 10 HTML invoice templates, email/PDF generation, and Stripe-powered subscription payments, all backed by the same Spring Boot + MongoDB Atlas API.",
         image: "/projects/quickinvoice_mobile.png",
         tags: ["Kotlin", "Android Studio", "Spring Boot", "Stripe", "Retrofit", "REST API"],
-        demoUrl: "#",
         githubUrl: "https://github.com/Desiigner101/QUICKINVOICE-MOBILE",
         apkUrl: "/apks/quickinvoice.apk",
-    },
-    {
-        id: 9,
-        title: "AkAI LSTM Model",
-        description: "The deep-learning core of AkAI — an LSTM-based recognition model that classifies Filipino Sign Language gestures in near real-time. Built with TensorFlow/Keras and MediaPipe Holistic for hand and pose landmark extraction, trained on the FSL-105 dataset.",
-        image: "/projects/akai_model.png",
-        tags: ["Python", "TensorFlow", "Keras", "MediaPipe", "LSTM", "OpenCV"],
-        demoUrl: "#",
-        githubUrl: "https://github.com/Desiigner101/linkfsl-model",
         hideDemo: true,
     },
     {
+        id: 5,
+        title: "EquiTrack",
+        description: "A full-stack financial-tracking web application powered by React & Vite on the frontend and Spring Boot on the backend. Features interactive dashboards, detailed visualizations, dynamic filters, and a sleek, responsive UI.",
+        image: "/projects/Equitrack.png",
+        tags: ["Spring Boot", "React", "Vite", "Java", "REST API", "PostgreSQL"],
+        demoUrl: "https://equitrack-webapp.vercel.app/",
+        githubUrl: "https://github.com/Desiigner101/EQUITRACK-WEBAPP",
+    },
+    {
+        id: 6,
+        title: "Stunotes",
+        description: "A full-stack web application designed to help students manage academic tasks, deadlines, and notes in one platform. It allows users to create, edit, and track assignments, add class notes, and receive reminders for important school activities.",
+        image: "/projects/stunotes.png",
+        tags: ["Django", "Python", "Javascript", "REST API", "Cloudinary", "SupaBase"],
+        demoUrl: "https://csit-327-g8-stunotes.vercel.app/",
+        githubUrl: "https://github.com/Desiigner101/CSIT327-G8-STUNOTES",
+    },
+    {
+        id: 7,
+        title: "GenBuild POS v1.0",
+        description: "A student-built Retail Billing Software inspired by my GenBuild app and Figma designs, my first ever POS system using React.js & Spring Boot, made as a humble step in learning full-stack development.",
+        image: "/projects/genbuild_version1.png",
+        tags: ["Django", "Python", "Javascript", "REST API"],
+        githubUrl: "https://github.com/Desiigner101/GENBUILD-POS",
+        hideDemo: true,
+    },
+    {
+        id: 8,
+        title: "GenBuild: Android Mobile App",
+        description: "Final project for Mobile Development class, developed independently using Kotlin in Android Studio. This project marked my first solo application build and a key step in strengthening my mobile development skills.",
+        image: "/projects/MOBILE_APP_PROJECT3.png",
+        tags: ["Kotlin", "Android Studio", "GitHub"],
+        githubUrl: "https://github.com/Desiigner101/GenBuild",
+        hideDemo: true,
+    },
+    {
+        id: 9,
+        title: "GenBuild: Figma Mockup Design",
+        description: "A mockup design for my Platform-based Development class project made using Figma, and is very useful for my sequel project integrating the design into my mobile app project.",
+        image: "/projects/FIGMA_PROJECT_GENBUILD.png",
+        tags: ["Figma", "Canva"],
+        demoUrl: "https://www.figma.com/proto/qKyHBP0uGtCZ8kGh8rk4FB/Mobile-App--GenBuild-?t=QnitkeHVnKmX60gI-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=89-452&starting-point-node-id=89%3A452",
+        githubUrl: "#",
+        hideCode: true,
+    },
+    {
         id: 10,
-        title: "AkAI",
-        description: "A two-way Filipino Sign Language communication assistant designed to bridge conversations between Deaf and hearing users on a single device. Combines real-time sign-to-text recognition with speech-to-text to create a shared conversation thread. My capstone project (IT332).",
-        image: "/projects/akai.png",
-        tags: ["Kotlin", "Vosk", "MediaPipe", "Offline", "Speech-to-Text"],
-        demoUrl: "#",
-        githubUrl: "https://github.com/Desiigner101/AkAI-Android",
-        apkUrl: "https://github.com/Desiigner101/AkAI-Android/releases/latest/download/akai.apk",
+        title: "Object-Oriented Programming 2 Project",
+        description: "An OOP2 finals project made with friends (Daniel, Sophia, Ashley, Michelle) using IntelliJ and Java, with libGDX as the game framework.",
+        image: "/projects/OOP2_PROJECT_VORTEX1.png",
+        tags: ["IntelliJ", "Java", "GitHub", "libGDX"],
+        githubUrl: "https://github.com/Desiigner101/Vortex",
+        hideDemo: true,
     },
 ]
 
@@ -223,15 +223,17 @@ export const ProjectsSections = () => {
                                                 Demo
                                             </a>
                                         ) : null}
-                                        <a
-                                            href={project.githubUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-muted hover:bg-muted/80 text-foreground rounded-lg transition-all duration-200"
-                                        >
-                                            <Github size={13} />
-                                            Code
-                                        </a>
+                                        {!project.hideCode && (
+                                            <a
+                                                href={project.githubUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-muted hover:bg-muted/80 text-foreground rounded-lg transition-all duration-200"
+                                            >
+                                                <Github size={13} />
+                                                Code
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -295,15 +297,17 @@ export const ProjectsSections = () => {
                                                     View Demo
                                                 </a>
                                             ) : null}
-                                            <a
-                                                href={project.githubUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex items-center gap-2 px-4 py-2 text-sm font-medium bg-muted hover:bg-muted/80 text-foreground rounded-lg transition-all duration-200"
-                                            >
-                                                <Github size={14} />
-                                                View Code
-                                            </a>
+                                            {!project.hideCode && (
+                                                <a
+                                                    href={project.githubUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-2 px-4 py-2 text-sm font-medium bg-muted hover:bg-muted/80 text-foreground rounded-lg transition-all duration-200"
+                                                >
+                                                    <Github size={14} />
+                                                    View Code
+                                                </a>
+                                            )}
                                         </div>
                                     </div>
                                 </div>

@@ -1,31 +1,48 @@
 import { useState } from "react";
 import { cn } from "../lib/utils";
 
+// Logos come from devicon (https://devicon.dev) via jsDelivr CDN, no install
+// needed, just image URLs. `icon` is the devicon slug; a few tools that aren't
+// in devicon fall back to a Simple Icons badge or no logo.
+const dv = (slug, variant = "original") =>
+    `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${slug}/${slug}-${variant}.svg`;
+
 const skills = [
-    { name: "HTML/CSS", category: "frontend" },
-    { name: "JavaScript", category: "frontend" },
-    { name: "React", category: "frontend" },
-    { name: "Tailwind CSS", category: "frontend" },
-    { name: "Vite", category: "frontend" },
+    { name: "HTML/CSS", category: "frontend", icon: dv("html5") },
+    { name: "JavaScript", category: "frontend", icon: dv("javascript") },
+    { name: "React", category: "frontend", icon: dv("react") },
+    { name: "Tailwind CSS", category: "frontend", icon: dv("tailwindcss") },
+    { name: "Vite", category: "frontend", icon: dv("vitejs") },
 
-    { name: "Node.js", category: "backend" },
-    { name: "Apache", category: "backend" },
-    { name: "MongoDB", category: "backend" },
+    { name: "Spring Boot", category: "backend", icon: dv("spring") },
+    { name: "Django", category: "backend", icon: dv("django", "plain") },
+    { name: "Node.js", category: "backend", icon: dv("nodejs") },
+    { name: "MongoDB", category: "backend", icon: dv("mongodb") },
+    { name: "MySQL", category: "backend", icon: dv("mysql") },
+    { name: "PostgreSQL", category: "backend", icon: dv("postgresql") },
+    { name: "REST API", category: "backend", icon: dv("fastapi") },
 
-    { name: "Python", category: "languages" },
-    { name: "C", category: "languages" },
-    { name: "Java", category: "languages" },
-    { name: "Kotlin", category: "languages" },
+    { name: "TensorFlow", category: "machine learning", icon: dv("tensorflow") },
+    { name: "Keras", category: "machine learning", icon: dv("keras") },
+    { name: "MediaPipe", category: "machine learning", icon: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/google.svg" },
+    { name: "OpenCV", category: "machine learning", icon: dv("opencv") },
+    { name: "NumPy", category: "machine learning", icon: dv("numpy") },
+    { name: "scikit-learn", category: "machine learning", icon: dv("scikitlearn") },
 
-    { name: "Git / GitHub", category: "tools" },
-    { name: "Postman", category: "tools" },
-    { name: "Figma", category: "tools" },
-    { name: "Android Studio", category: "tools" },
-    { name: "VS Code", category: "tools" },
-    { name: "IntelliJ IDEA", category: "tools" },
+    { name: "Python", category: "languages", icon: dv("python") },
+    { name: "C", category: "languages", icon: dv("c") },
+    { name: "Java", category: "languages", icon: dv("java") },
+    { name: "Kotlin", category: "languages", icon: dv("kotlin") },
+
+    { name: "Git / GitHub", category: "tools", icon: dv("git") },
+    { name: "Postman", category: "tools", icon: dv("postman") },
+    { name: "Figma", category: "tools", icon: dv("figma") },
+    { name: "Android Studio", category: "tools", icon: dv("androidstudio") },
+    { name: "VS Code", category: "tools", icon: dv("vscode") },
+    { name: "IntelliJ IDEA", category: "tools", icon: dv("intellij") },
 ];
 
-const categories = ["all", "frontend", "backend", "languages", "tools"];
+const categories = ["all", "frontend", "backend", "machine learning", "languages", "tools"];
 
 export const SkillsSection = () => {
     const [activeCategory, setActiveCategory] = useState("all");
@@ -68,10 +85,20 @@ export const SkillsSection = () => {
                     {filteredSkills.map((skill) => (
                         <span
                             key={skill.name}
-                            className="px-5 py-2.5 rounded-lg border border-border/60 bg-card/80 text-sm font-medium
+                            className="flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border/60 bg-card/80 text-sm font-medium
                                        hover:border-primary/50 hover:text-primary hover:bg-primary/5
                                        transition-all duration-200 cursor-default"
                         >
+                            {skill.icon && (
+                                <img
+                                    src={skill.icon}
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy"
+                                    className="h-5 w-5 object-contain"
+                                    onError={(e) => { e.currentTarget.style.display = "none"; }}
+                                />
+                            )}
                             {skill.name}
                         </span>
                     ))}
