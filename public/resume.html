@@ -7,16 +7,16 @@
 <style>
     :root {
         --ink: #1a1a2e;
-        --muted: #555;
-        --accent: #2E9EF7;
-        --line: #e2e2e8;
+        --muted: #4a4a57;
+        --accent: #1b5e8c;
+        --line: #d9dce3;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-        font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        font-family: "Calibri", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
         color: var(--ink);
-        line-height: 1.5;
-        font-size: 13.5px;
+        line-height: 1.38;
+        font-size: 13px;
         background: #f4f5f7;
         padding: 24px;
     }
@@ -24,54 +24,58 @@
         max-width: 800px;
         margin: 0 auto;
         background: #fff;
-        padding: 44px 48px;
+        padding: 34px 44px;
         box-shadow: 0 2px 20px rgba(0,0,0,0.08);
     }
 
     /* Header */
-    header { border-bottom: 3px solid var(--accent); padding-bottom: 16px; margin-bottom: 20px; }
-    header h1 { font-size: 30px; letter-spacing: -0.5px; font-weight: 700; }
-    header .role { color: var(--accent); font-weight: 600; font-size: 14.5px; margin-top: 2px; }
+    header { border-bottom: 2.5px solid var(--accent); padding-bottom: 12px; margin-bottom: 15px; }
+    header h1 { font-size: 29px; letter-spacing: 0.3px; font-weight: 700; color: var(--ink); }
+    header .role { color: var(--accent); font-weight: 600; font-size: 14px; margin-top: 3px; letter-spacing: 0.3px; }
     .contact {
-        margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px 18px;
+        margin-top: 11px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 9px;
         font-size: 12.5px; color: var(--muted);
     }
     .contact a { color: var(--muted); text-decoration: none; }
-    .contact span { display: inline-flex; align-items: center; gap: 5px; }
+    .contact a:hover { color: var(--accent); }
+    .contact .sep { color: #b9bcc5; font-weight: 300; }
 
     /* Sections */
-    section { margin-bottom: 20px; }
+    section { margin-bottom: 8px; }
     h2 {
         font-size: 12.5px; text-transform: uppercase; letter-spacing: 1.5px;
-        color: var(--accent); font-weight: 700; margin-bottom: 10px;
-        border-bottom: 1px solid var(--line); padding-bottom: 4px;
+        color: var(--accent); font-weight: 700; margin-bottom: 6px;
+        border-bottom: 1px solid var(--line); padding-bottom: 3px;
     }
 
     .summary { color: var(--muted); }
 
     /* Entry (jobs/education/projects) */
-    .entry { margin-bottom: 13px; }
+    .entry { margin-bottom: 8px; }
     .entry:last-child { margin-bottom: 0; }
     .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
     .entry-title { font-weight: 700; font-size: 13.5px; }
     .entry-sub { color: var(--accent); font-weight: 600; font-size: 12.5px; }
     .entry-date { color: var(--muted); font-size: 12px; white-space: nowrap; }
-    .entry ul { margin: 5px 0 0 16px; }
-    .entry li { margin-bottom: 2px; color: var(--muted); }
-    .entry p.desc { color: var(--muted); margin-top: 3px; }
-    .tags { margin-top: 4px; font-size: 11.5px; color: #777; font-style: italic; }
+    .entry ul { margin: 4px 0 0 16px; }
+    .entry li { margin-bottom: 1px; color: var(--muted); }
+    .entry p.desc { color: var(--muted); margin-top: 2px; }
+    .tags { margin-top: 3px; font-size: 11.5px; color: #777; font-style: italic; }
 
     /* Skills grid */
-    .skills-grid { display: grid; grid-template-columns: 130px 1fr; gap: 5px 14px; }
+    .skills-grid { display: grid; grid-template-columns: 130px 1fr; gap: 1px 14px; line-height: 1.3; }
     .skills-grid .cat { font-weight: 700; font-size: 12.5px; }
     .skills-grid .list { color: var(--muted); }
+
+    section:last-child { margin-bottom: 0; }
+    section:last-child h2 { margin-bottom: 5px; }
 
     a.link { color: var(--accent); text-decoration: none; }
 
     @media print {
         body { background: #fff; padding: 0; font-size: 12.5px; }
-        .page { box-shadow: none; max-width: 100%; padding: 28px 34px; }
-        @page { margin: 12mm; }
+        .page { box-shadow: none; max-width: 100%; padding: 0; }
+        @page { margin: 11mm 13mm; size: A4; }
     }
 </style>
 </head>
@@ -81,13 +85,17 @@
     <!-- ===== HEADER ===== -->
     <header>
         <h1>Kervin Gino M. Sarsonas</h1>
-        <div class="role">Mobile &amp; Full-Stack Developer &nbsp;•&nbsp; Machine Learning Enthusiast</div>
+        <div class="role">Machine Learning &amp; Mobile Developer &nbsp;&bull;&nbsp; Full-Stack Engineer</div>
         <div class="contact">
-            <span>📧 <a href="mailto:desiigner4074@gmail.com">desiigner4074@gmail.com</a></span>
-            <span>📱 0921 201 0166</span>
-            <span>📍 Cebu City, Philippines</span>
-            <span>💻 <a href="https://github.com/desiigner101">github.com/desiigner101</a></span>
-            <span>🔗 <a href="https://www.linkedin.com/in/gino-sarsonas-4479a52a4/">linkedin.com/in/gino-sarsonas</a></span>
+            <a href="mailto:desiigner4074@gmail.com">desiigner4074@gmail.com</a>
+            <span class="sep">|</span>
+            <span>0921 201 0166</span>
+            <span class="sep">|</span>
+            <span>Cebu City, Philippines</span>
+            <span class="sep">|</span>
+            <a href="https://github.com/desiigner101">github.com/desiigner101</a>
+            <span class="sep">|</span>
+            <a href="https://www.linkedin.com/in/gino-sarsonas-4479a52a4/">linkedin.com/in/gino-sarsonas</a>
         </div>
     </header>
 
@@ -95,11 +103,11 @@
     <section>
         <h2>Summary</h2>
         <p class="summary">
-            Fourth-year BSIT student and hands-on developer who ships real, deployed software
-            across mobile, full-stack web, and machine learning. Built and published AkAI, a
-            two-way Filipino Sign Language communication assistant powered by an LSTM recognition
-            model, now live on Google Play. Comfortable owning a project end to end, from data
-            and model training to native Android delivery and REST-backed web systems.
+            Fourth-year BSIT student and machine learning developer who ships real, deployed AI
+            systems. Designed, trained, and shipped AkAI &mdash; a 64-class on-device LSTM
+            sign-language model (TensorFlow &rarr; TensorFlow Lite) on a live Google Play app,
+            validated with 30 users via signer-independent (LOSO) evaluation. Comfortable owning a
+            project end to end: data pipelines, model training, Android deployment, and full-stack web.
         </p>
     </section>
 
@@ -109,7 +117,7 @@
         <div class="entry">
             <div class="entry-head">
                 <div>
-                    <div class="entry-title">Cebu Institute of Technology-University</div>
+                    <div class="entry-title">Cebu Institute of Technology &ndash; University</div>
                     <div class="entry-sub">Bachelor of Science in Information Technology</div>
                 </div>
                 <div class="entry-date">Expected 2027</div>
@@ -130,9 +138,8 @@
                 <div class="entry-date">2020 – 2022</div>
             </div>
             <ul>
-                <li>Provided hardware and software technical support to staff and office systems.</li>
-                <li>Troubleshot and maintained computers and peripherals to keep daily operations running.</li>
-                <li>Assisted with setup, configuration, and basic system administration tasks.</li>
+                <li>Provided hardware/software support and maintained office systems to keep daily operations running.</li>
+                <li>Handled setup, configuration, and basic system administration tasks.</li>
             </ul>
         </div>
     </section>
@@ -144,15 +151,21 @@
         <div class="entry">
             <div class="entry-head">
                 <div class="entry-title">AkAI: Two-Way Filipino Sign Language Assistant</div>
-                <div class="entry-date">Capstone • Live on Google Play</div>
+                <div class="entry-date">Capstone &bull; Live on Google Play</div>
             </div>
             <p class="desc">
-                A mobile app bridging communication between Deaf and hearing users on a single
-                device, combining real-time sign-to-text recognition with offline speech-to-text
-                into a shared conversation thread. Trained and evaluated the LSTM model with a
-                signer-independent (leave-one-signer-out) split for honest, real-world accuracy.
+                Offline Android app letting Deaf and hearing users converse in one shared thread,
+                pairing real-time sign-to-text with on-device speech-to-text. Built the full ML pipeline:
             </p>
-            <p class="tags">Kotlin • TensorFlow • Keras • MediaPipe • Vosk • LSTM • OpenCV</p>
+            <ul>
+                <li>Trained a <strong>64-class LSTM</strong> (26 letters + 38 words) on a <strong>156-feature</strong>
+                    MediaPipe landmark pipeline; deployed via <strong>TensorFlow Lite</strong> for on-device inference.</li>
+                <li><strong>99.1% signer-dependent</strong> / <strong>72.5% signer-independent</strong> accuracy via
+                    <strong>leave-one-signer-out (LOSO)</strong> cross-validation for honest, real-world estimates.</li>
+                <li>Integrated offline Filipino/English speech-to-text (<strong>Vosk</strong>, ~1.4&nbsp;s) and validated
+                    with <strong>30 users across 2 rounds</strong> (ISO 9241-11, SUS, TAM).</li>
+            </ul>
+            <p class="tags">Python &bull; TensorFlow &bull; Keras &bull; LSTM &bull; MediaPipe &bull; OpenCV &bull; NumPy &bull; TensorFlow Lite &bull; Kotlin &bull; Vosk</p>
         </div>
 
         <div class="entry">
@@ -198,11 +211,11 @@
     <section>
         <h2>Technical Skills</h2>
         <div class="skills-grid">
-            <div class="cat">Languages</div>
-            <div class="list">Java, Kotlin, Python, JavaScript, C</div>
-
             <div class="cat">Machine Learning</div>
-            <div class="list">TensorFlow, Keras, MediaPipe, OpenCV, NumPy, scikit-learn</div>
+            <div class="list">TensorFlow, Keras, TensorFlow Lite, LSTM / Deep Learning, MediaPipe, OpenCV, NumPy</div>
+
+            <div class="cat">Languages</div>
+            <div class="list">Python, Java, Kotlin, JavaScript, C</div>
 
             <div class="cat">Frontend</div>
             <div class="list">React, Vite, Tailwind CSS, HTML5, CSS3, Bootstrap</div>
@@ -218,15 +231,10 @@
     <!-- ===== CERTIFICATIONS ===== -->
     <section>
         <h2>Certifications &amp; Interests</h2>
-        <div class="entry">
-            <div class="entry-head">
-                <div class="entry-title">CMAS Open Water Scuba Diver</div>
-                <div class="entry-date">Since June 2023</div>
-            </div>
-            <p class="desc">
-                Interests: mobile &amp; ML application development, PC building, athletics, and the outdoors.
-            </p>
-        </div>
+        <p class="desc" style="margin-top:0;">
+            <strong>CMAS Open Water Scuba Diver</strong> (2023) &nbsp;&bull;&nbsp; Interests: mobile &amp; ML
+            application development, PC building, athletics, and the outdoors.
+        </p>
     </section>
 
 </div>
