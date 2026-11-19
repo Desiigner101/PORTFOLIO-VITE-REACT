@@ -28,17 +28,28 @@
         box-shadow: 0 2px 20px rgba(0,0,0,0.08);
     }
 
-    /* Header */
-    header { border-bottom: 2.5px solid var(--accent); padding-bottom: 12px; margin-bottom: 15px; }
-    header h1 { font-size: 29px; letter-spacing: 0.3px; font-weight: 700; color: var(--ink); }
-    header .role { color: var(--accent); font-weight: 600; font-size: 14px; margin-top: 3px; letter-spacing: 0.3px; }
+    /* Header - clean professional typography */
+    header {
+        text-align: center;
+        border-bottom: 1.5px solid var(--line);
+        padding-bottom: 12px; margin-bottom: 15px;
+    }
+    header h1 {
+        font-size: 28px; font-weight: 700; color: var(--ink);
+        letter-spacing: 2px; text-transform: uppercase;
+    }
+    header .role {
+        color: var(--accent); font-weight: 600; font-size: 13px;
+        margin-top: 4px; letter-spacing: 0.5px;
+    }
     .contact {
-        margin-top: 11px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 9px;
-        font-size: 12.5px; color: var(--muted);
+        margin-top: 8px; display: flex; flex-wrap: wrap; justify-content: center;
+        align-items: center; gap: 3px 10px;
+        font-size: 12px; color: var(--muted);
     }
     .contact a { color: var(--muted); text-decoration: none; }
     .contact a:hover { color: var(--accent); }
-    .contact .sep { color: #b9bcc5; font-weight: 300; }
+    .contact .sep { color: #c3c8d1; font-weight: 300; }
 
     /* Sections */
     section { margin-bottom: 8px; }
@@ -104,8 +115,8 @@
         <h2>Summary</h2>
         <p class="summary">
             Fourth-year BSIT student and machine learning developer who ships real, deployed AI
-            systems. Designed, trained, and shipped AkAI &mdash; a 64-class on-device LSTM
-            sign-language model (TensorFlow &rarr; TensorFlow Lite) on a live Google Play app,
+            systems. Designed, trained, and shipped AkAI, a 64-class on-device LSTM
+            sign-language model (TensorFlow to TensorFlow Lite) on a live Google Play app,
             validated with 30 users via signer-independent (LOSO) evaluation. Comfortable owning a
             project end to end: data pipelines, model training, Android deployment, and full-stack web.
         </p>
