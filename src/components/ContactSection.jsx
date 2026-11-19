@@ -92,7 +92,7 @@ export const ContactSection = () => {
                                 {[
                                     { href: "https://www.facebook.com/gino.sarsonas", icon: Facebook, label: "Facebook" },
                                     { href: "https://www.instagram.com/ginowithhaki/", icon: Instagram, label: "Instagram" },
-                                    { href: "https://www.linkedin.com/in/gino-sarsonas-4479a52a4/", icon: Linkedin, label: "LinkedIn" },
+                                    { href: "https://www.linkedin.com/in/kervingino-sarsonas/", icon: Linkedin, label: "LinkedIn" },
                                 ].map(({ href, icon: Icon, label }) => (
                                     <a
                                         key={label}
