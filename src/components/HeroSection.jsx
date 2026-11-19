@@ -1,9 +1,10 @@
-import { ArrowDown, Mail, Github, Linkedin, Facebook, FileText } from "lucide-react"
+import { ArrowDown, Mail, Github, Linkedin, Facebook, FileText, Globe } from "lucide-react"
 
 const socials = [
     { href: "https://github.com/Desiigner101", icon: Github, label: "GitHub" },
     { href: "https://www.linkedin.com/in/kervingino-sarsonas/", icon: Linkedin, label: "LinkedIn" },
     { href: "https://www.facebook.com/gino.sarsonas", icon: Facebook, label: "Facebook" },
+    { href: "https://play.google.com/store/apps/details?id=com.akai", icon: Globe, label: "AkAI on Google Play" },
 ]
 
 export const HeroSection = () => {
